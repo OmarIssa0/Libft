@@ -83,7 +83,7 @@ static char	**ft_cpy_strs(char **strs, const char *s, char c)
 	return (strs);
 }
 
-static char	**ft_merror(char **strs)
+char	**ft_merror(char **strs)
 {
 	int	i;
 
