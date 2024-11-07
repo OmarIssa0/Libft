@@ -15,11 +15,11 @@
 long	ft_atol(const char *str)
 {
 	long	num;
-	int		isneg;
+	int		sign;
 	int		i;
 
 	num = 0;
-	isneg = 1;
+	sign = 1;
 	i = 0;
 	while (str[i] && (str[i] == ' ' || str[i] == '\t'
 			|| str[i] == '\n' || str[i] == '\r'
@@ -29,7 +29,7 @@ long	ft_atol(const char *str)
 		i++;
 	else if (str[i] == '-')
 	{
-		isneg *= -1;
+		sign *= -1;
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
@@ -37,5 +37,5 @@ long	ft_atol(const char *str)
 		num = (num * 10) + (str[i] - '0');
 		i++;
 	}
-	return (num * isneg);
+	return (num * sign);
 }
