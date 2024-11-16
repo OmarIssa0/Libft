@@ -74,7 +74,12 @@
 // 	result = convert_and_validate(str, i, sign, valid);
 // 	return (result);
 // }
-
+/*
+	example:
+		char *str = "   +1234"; --> i = 4 --> sign = 1
+		char *str = "   -1234"; --> i = 4 --> sign = -1
+		char *str = "0000001234"; --> i = 7 --> sign = 1
+*/
 static size_t	handle_initial(const char *str, int *sign)
 {
 	size_t	i;
@@ -93,6 +98,10 @@ static size_t	handle_initial(const char *str, int *sign)
 		i++;
 	return (i);
 }
+/*
+	example:
+		the length of the number is less than or equal to 10
+*/
 
 static int	is_valid_length(const char *str, size_t i)
 {
