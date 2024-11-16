@@ -6,7 +6,7 @@
 /*   By: oissa <oissa@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 11:28:14 by oissa             #+#    #+#             */
-/*   Updated: 2024/09/06 18:47:51 by oissa            ###   ########.fr       */
+/*   Updated: 2024/11/16 10:58:01 by oissa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ static char	**ft_cpy_strs(char **strs, const char *s, char c)
 	return (strs);
 }
 
-char	**ft_merror(char **strs)
+char	**ft_free_split(char **strs)
 {
 	int	i;
 
@@ -121,6 +121,6 @@ char	**ft_split(char const *s, char c)
 		strs[wordcount] = NULL;
 	}
 	else
-		strs = ft_merror(strs);
+		strs = ft_free_split(strs);
 	return (strs);
 }
