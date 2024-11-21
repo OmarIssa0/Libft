@@ -3,6 +3,7 @@ CFLAGS = -Wall -Wextra -Werror -I.
 AR = ar rcs
 RM = rm -f
 NAME = libft.a
+OBJDIR = obj
 
 SRC =	ft_atoi.c ft_bzero.c				\
 		ft_calloc.c ft_putendl_fd.c			\
@@ -44,19 +45,28 @@ SRC =	ft_atoi.c ft_bzero.c				\
 		get_next_line/get_next_line_bonus.c	\
 		get_next_line/get_next_line_utils_bonus.c
 
-OBJS = $(SRC:.c=.o)
+OBJS = $(SRC:%.c=$(OBJDIR)/%.o)
 
 all: $(NAME)
+
+$(OBJDIR):
+	mkdir -p $(OBJDIR)
+	mkdir -p $(OBJDIR)/printf
+	mkdir -p $(OBJDIR)/get_next_line
+
+$(OBJDIR)/%.o: %.c | $(OBJDIR)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 clean:
 	$(RM) $(OBJS)
+	$(RM) -r $(OBJDIR)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re 
+.PHONY: all clean fclean re
