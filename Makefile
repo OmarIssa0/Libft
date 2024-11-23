@@ -41,9 +41,7 @@ SRC =	ft_atoi.c ft_bzero.c						\
 		printf/ft_printf_hex_uppercase.c			\
 		printf/ft_printf_char.c						\
 		get_next_line/get_next_line.c				\
-		get_next_line/get_next_line_utils.c			\
 		get_next_line/get_next_line_bonus.c			\
-		get_next_line/get_next_line_utils_bonus.c	\
 		printf_fd/ft_printf_fd.c					\
 		printf_fd/ft_printf_fd_unsigned.c			\
 		printf_fd/ft_printf_fd_string.c				\

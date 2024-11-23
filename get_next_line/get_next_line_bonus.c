@@ -15,16 +15,6 @@
 #define MAX_FD 1024
 #define LIST_SIZE 4096
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
 static char	*ft_save_line(char *line, char (*reminder)[LIST_SIZE])
 {
 	size_t	i;
@@ -68,7 +58,7 @@ static char	*ft_read(int fd, char (*reminder)[LIST_SIZE], char *buffer)
 	return (line);
 }
 
-char	*get_next_line(int fd)
+char	*get_next_line_bonus(int fd)
 {
 	static char	reminder[MAX_FD][LIST_SIZE];
 	char		*line;

@@ -14,16 +14,6 @@
 
 #define LIST_SIZE 4096
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
 static char	*ft_read(int fd, char (*reminder)[LIST_SIZE], char *buffer)
 {
 	char	*line;
