@@ -42,15 +42,15 @@ SRC =	ft_atoi.c ft_bzero.c						\
 		printf/ft_printf_char.c						\
 		get_next_line/get_next_line.c				\
 		get_next_line/get_next_line_bonus.c			\
-		printf_fd/ft_printf_fd.c					\
-		printf_fd/ft_printf_fd_unsigned.c			\
-		printf_fd/ft_printf_fd_string.c				\
-		printf_fd/ft_printf_fd_ptr.c				\
-		printf_fd/ft_printf_fd_number.c				\
-		printf_fd/ft_printf_fd_hex.c				\
-		printf_fd/ft_printf_fd_hex_uppercase.c		\
-		printf_fd/ft_printf_fd_char.c				\
-		printf_fd/ft_utils_fd.c						\
+		dprintf/ft_dprintf.c					\
+		dprintf/ft_dprintf_unsigned.c			\
+		dprintf/ft_dprintf_string.c				\
+		dprintf/ft_dprintf_ptr.c				\
+		dprintf/ft_dprintf_number.c				\
+		dprintf/ft_dprintf_hex.c				\
+		dprintf/ft_dprintf_hex_uppercase.c		\
+		dprintf/ft_dprintf_char.c				\
+		dprintf/ft_utils.c						\
 
 OBJS = $(SRC:%.c=$(OBJDIR)/%.o)
 
@@ -59,7 +59,7 @@ all: $(NAME)
 $(OBJDIR):
 	mkdir -p $(OBJDIR)
 	mkdir -p $(OBJDIR)/printf
-	mkdir -p $(OBJDIR)/printf_fd
+	mkdir -p $(OBJDIR)/dprintf
 	mkdir -p $(OBJDIR)/get_next_line
 
 $(OBJDIR)/%.o: %.c | $(OBJDIR)
