@@ -12,9 +12,9 @@
 
 #include "ft_dprintf.h"
 
-static int ft_dprintf_check(char format, va_list args, int fd)
+static int	ft_dprintf_check(char format, va_list args, int fd)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (format == 's')
@@ -36,11 +36,11 @@ static int ft_dprintf_check(char format, va_list args, int fd)
 	return (len);
 }
 
-int ft_dprintf(int fd, const char *format, ...)
+int	ft_dprintf(int fd, const char *format, ...)
 {
-	va_list args;
-	int i;
-	int length;
+	va_list	args;
+	int		i;
+	int		length;
 
 	i = 0;
 	length = 0;

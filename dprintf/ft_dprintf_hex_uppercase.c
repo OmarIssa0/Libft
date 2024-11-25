@@ -12,9 +12,9 @@
 
 #include "ft_dprintf.h"
 
-int ft_dprintf_hex_uppercase(unsigned long n, int fd)
+int	ft_dprintf_hex_uppercase(unsigned long n, int fd)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (n >= 16)

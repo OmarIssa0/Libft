@@ -12,9 +12,9 @@
 
 #include "ft_dprintf.h"
 
-int ft_dprintf_hex(unsigned long n, int fd)
+int	ft_dprintf_hex(unsigned long n, int fd)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (n >= 16)
@@ -36,5 +36,5 @@ int ft_dprintf_hex(unsigned long n, int fd)
 //     char buffer[20];
 //     int len = sprintf(buffer, "%d\n", length);
 //     write(1, buffer, len);
-//     return 0;
+//     return (0);
 // }

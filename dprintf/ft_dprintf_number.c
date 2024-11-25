@@ -12,10 +12,10 @@
 
 #include "ft_dprintf.h"
 
-int ft_dprintf_number(int n, int fd)
+int	ft_dprintf_number(int n, int fd)
 {
-	char *a;
-	int len;
+	char	*a;
+	int		len;
 
 	len = 0;
 	a = ft_itoa(n);

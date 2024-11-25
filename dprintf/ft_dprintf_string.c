@@ -12,9 +12,9 @@
 
 #include "ft_dprintf.h"
 
-int ft_dprintf_string(char *args, int fd)
+int	ft_dprintf_string(char *args, int fd)
 {
-	int length;
+	int	length;
 
 	length = 0;
 	if (args == NULL)

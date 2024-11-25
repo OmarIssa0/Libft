@@ -12,9 +12,9 @@
 
 #include "ft_dprintf.h"
 
-int ft_dprintf_unsigned(unsigned int n, int fd)
+int	ft_dprintf_unsigned(unsigned int n, int fd)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (n <= UINT_MAX)
